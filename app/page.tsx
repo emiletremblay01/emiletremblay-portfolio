@@ -156,7 +156,7 @@ export default function Home() {
           <div className="h-96"></div>
           {/* Contact */}
           <Element name="contact">
-            <Reveal>
+            <Reveal className="mx-auto">
               <div className="flex w-full flex-col items-center gap-2">
                 <a
                   href="mailto:emile.t.business@gmail.com"
