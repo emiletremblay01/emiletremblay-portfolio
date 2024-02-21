@@ -24,10 +24,11 @@ export const FeaturedCard = ({
       tiltMaxAngleY={6}
       lineGlareEnable={false}
       spotGlareEnable={false}
+      className=""
     >
       <div
         className={cn(
-          "group flex h-full flex-col  overflow-hidden rounded-2xl border border-white border-opacity-60  shadow  backdrop-blur",
+          "group flex h-full flex-col overflow-hidden rounded-2xl border border-white border-opacity-60  shadow  backdrop-blur",
           className,
         )}
       >

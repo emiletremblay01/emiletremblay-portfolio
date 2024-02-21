@@ -22,13 +22,11 @@ export const AboutSection = () => {
         speed={-6}
         className="absolute left-0 -z-40 h-full w-full overflow-clip  opacity-30 sm:left-8"
       >
-        <Reveal initial="right">
-          <Image
-            src={stars}
-            alt="stars"
-            className="pointer-events-none h-full select-none object-none object-left-top"
-          />
-        </Reveal>
+        <Image
+          src={stars}
+          alt="stars"
+          className="pointer-events-none h-full select-none object-none object-left-top"
+        />
       </Parallax>
 
       <Parallax

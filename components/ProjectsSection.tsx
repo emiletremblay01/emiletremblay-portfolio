@@ -22,13 +22,11 @@ export const ProjectsSection = () => {
         speed={-6}
         className="absolute -z-20  h-full w-full overflow-clip opacity-30"
       >
-        <Reveal initial="right">
-          <Image
-            src={stars}
-            alt="stars"
-            className="pointer-events-none -z-20 h-full select-none object-none object-left-top"
-          />
-        </Reveal>
+        <Image
+          src={stars}
+          alt="stars"
+          className="pointer-events-none -z-20 h-full select-none object-none object-left-top"
+        />
       </Parallax>
       <Parallax
         speed={2}
@@ -43,10 +41,10 @@ export const ProjectsSection = () => {
       <Reveal>
         <h1 className="mb-4 mt-4  text-xl font-bold">Featured Projects</h1>
       </Reveal>
-      <Reveal className=" mx-auto ">
+      <Reveal className=" mx-auto overflow-visible">
         <motion.div className=" flex h-full w-full flex-col items-center justify-between gap-8 pb-16 lg:flex-row lg:items-stretch">
           <a
-            className="flex items-stretch"
+            className="flex items-stretch "
             target="_blank"
             href="https://ql-remplacements-app-ngcb.vercel.app/"
           >
@@ -63,7 +61,7 @@ export const ProjectsSection = () => {
             ></FeaturedCard>
           </a>
           <a
-            className="flex items-stretch"
+            className="flex items-stretch "
             target="_blank"
             href="https://peripherie-website.vercel.app/"
           >
