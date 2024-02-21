@@ -20,7 +20,6 @@ import { Element, Link as ScrollLink } from "react-scroll";
 export default function Home() {
   const [typingStatus, setTypingStatus] = useState<boolean>(false);
   const [typingFinished, setTypingFinished] = useState<boolean>(false);
-  const [isScrollable, setIsScrollable] = useState<boolean>(false);
   const isMobile = useIsMobile();
   const changeScrollOffset = () => (isMobile ? -50 : -200);
 

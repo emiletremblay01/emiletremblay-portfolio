@@ -1,15 +1,12 @@
-import { motion } from "framer-motion";
-import { useRef } from "react";
-import Tilt from "react-next-tilt";
-import { Parallax } from "react-scroll-parallax";
-import peripherieImg from "@/assets/images/site-peripherie.jpg";
 import remplacementsImg from "@/assets/images/app-remplacements.jpg";
+import peripherieImg from "@/assets/images/site-peripherie.jpg";
 import stars from "@/assets/svgs/Stars.svg";
-import Image from "next/image";
 import { FeaturedCard } from "@/components/FeaturedCard";
-import ScrollColorChange from "./ScrollColorChange";
-import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
 export const ProjectsSection = () => {
   return (
     <section className="relative m-auto max-w-5xl items-center rounded-2xl text-sm  sm:p-8 sm:shadow-md md:text-base ">
