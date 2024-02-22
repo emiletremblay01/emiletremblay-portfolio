@@ -1,22 +1,23 @@
 "use client";
+import { useEffect, useState } from "react";
+import { Element, Link as ScrollLink } from "react-scroll";
 import { ParallaxProvider } from "react-scroll-parallax";
+
+import { cn } from "@/lib/utils";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import { Reveal } from "@/components/Reveal";
 import {
   NavigationMenu,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-
 import { AboutSection } from "@/components/AboutSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import CursorLight from "@/components/CursorLight";
 import Navbar from "@/components/Navbar";
-import { ProjectsSection } from "@/components/ProjectsSection";
 import ArrowDown from "@/components/arrow-down";
-import useIsMobile from "@/hooks/useIsMobile";
-import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-import { Element, Link as ScrollLink } from "react-scroll";
 export default function Home() {
   const [typingStatus, setTypingStatus] = useState<boolean>(false);
   const [typingFinished, setTypingFinished] = useState<boolean>(false);
