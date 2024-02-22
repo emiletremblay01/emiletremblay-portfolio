@@ -37,11 +37,11 @@ export default function Home() {
       <ParallaxProvider>
         {/* Navigation */}
         <Navbar isReadyToMount={typingFinished}>
-          <NavigationMenu className="flex  px-10  py-6 ">
-            <div className="flex gap-6 rounded-2xl shadow-md  backdrop-blur sm:gap-10">
+          <NavigationMenu className="flex px-10 py-6">
+            <div className="flex gap-6 rounded-2xl shadow-md backdrop-blur sm:gap-10">
               <NavigationMenuList className="">
                 <ScrollLink
-                  className=" cursor-pointer"
+                  className="cursor-pointer"
                   offset={changeScrollOffset()}
                   smooth
                   to="about"
@@ -55,7 +55,7 @@ export default function Home() {
               </NavigationMenuList>
               <NavigationMenuList>
                 <ScrollLink
-                  className=" cursor-pointer"
+                  className="cursor-pointer"
                   offset={changeScrollOffset()}
                   smooth
                   to="work"
@@ -69,7 +69,7 @@ export default function Home() {
               </NavigationMenuList>
               <NavigationMenuList>
                 <ScrollLink
-                  className=" cursor-pointer"
+                  className="cursor-pointer"
                   offset={changeScrollOffset()}
                   smooth
                   to="contact"
@@ -88,8 +88,8 @@ export default function Home() {
         {/* Content */}
         <div className="px-6 sm:px-24">
           {/* Hero */}
-          <section className="relative  h-screen ">
-            <div className="absolute bottom-1/2 left-1/2  flex h-20 w-full -translate-x-1/2 flex-col items-center justify-center  ">
+          <section className="relative h-screen">
+            <div className="absolute bottom-1/2 left-1/2 flex h-20 w-full -translate-x-1/2 flex-col items-center justify-center">
               <TypeAnimation
                 sequence={[
                   "Hi,",
@@ -108,7 +108,7 @@ export default function Home() {
                 style={{
                   whiteSpace: "pre-line",
                 }}
-                className=" flex-none text-sm  sm:text-lg"
+                className="flex-none text-sm sm:text-lg"
               />
               <div className="h-10">
                 {typingStatus && (
@@ -126,12 +126,12 @@ export default function Home() {
                     style={{
                       whiteSpace: "pre-line",
                     }}
-                    className=" text-center text-xs sm:text-base"
+                    className="text-center text-xs sm:text-base"
                   />
                 )}
               </div>
             </div>
-            <div className="absolute bottom-0  flex w-full justify-center">
+            <div className="absolute bottom-0 flex w-full justify-center">
               {/* Arrow */}
               <ScrollLink
                 to="about"
