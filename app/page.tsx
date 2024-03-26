@@ -17,8 +17,9 @@ import CursorLight from "@/components/CursorLight";
 import Navbar from "@/components/Navbar";
 import ArrowDown from "@/components/arrow-down";
 import { TypeAnimation } from "react-type-animation";
+import { tech } from "@/types";
 
-export default function Home() {
+export default function Home({ data }: { data: tech[] | null }) {
   const [typingStatus, setTypingStatus] = useState<boolean>(false);
   const [typingFinished, setTypingFinished] = useState<boolean>(false);
   const isMobile = useIsMobile();
@@ -31,6 +32,7 @@ export default function Home() {
     }
     document.body.style.overflow = "hidden";
   }, [typingFinished]);
+
   return (
     <>
       {!isMobile && <CursorLight />}
@@ -146,7 +148,7 @@ export default function Home() {
           <div className="h-10"></div>
           {/* About */}
           <Element name="about">
-            <AboutSection />
+            <AboutSection data={data} />
           </Element>
           <div className="h-96"></div>
           {/* Work */}

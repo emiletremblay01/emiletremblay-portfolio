@@ -5,22 +5,24 @@ import { Parallax } from "react-scroll-parallax";
 import profilpic from "@/assets/images/profilpic.png";
 import stars from "@/assets/svgs/Stars.svg";
 import Image from "next/image";
-import technologies from "@/data/technologies.json";
 
 import { Reveal } from "@/components/Reveal";
-export const AboutSection = () => {
+import { Technologies } from "./Technologies";
+import { tech } from "@/types";
+
+export const AboutSection = ({ data }: { data: tech[] | null }) => {
   const dragRef = useRef<HTMLDivElement>(null);
   return (
-    <section className="relative m-auto max-w-5xl items-center text-sm sm:p-8 sm:shadow-md md:text-base ">
+    <section className="relative m-auto max-w-5xl items-center text-sm sm:p-8 sm:shadow-md md:text-base">
       <div className="absolute left-0 top-0 -z-30 h-full w-full">
-        <Reveal className=" h-full w-full  " distance={0} delay={0.9}>
-          <div className="absolute h-full w-full  sm:rounded-2xl sm:border sm:border-white sm:border-opacity-50"></div>
+        <Reveal className="h-full w-full" distance={0} delay={0.9}>
+          <div className="absolute h-full w-full sm:rounded-2xl sm:border sm:border-white sm:border-opacity-50"></div>
         </Reveal>
       </div>
 
       <Parallax
         speed={-6}
-        className="absolute left-0 -z-40 h-full w-full overflow-clip  opacity-30 sm:left-8"
+        className="absolute left-0 -z-40 h-full w-full overflow-clip opacity-30 sm:left-8"
       >
         <Image
           src={stars}
@@ -38,11 +40,11 @@ export const AboutSection = () => {
 
       <Reveal className="sm:hidden">
         <h1 className="text-3xl font-bold sm:hidden">About me</h1>
-        <hr className=" mb-8 opacity-50 sm:hidden" />
+        <hr className="mb-8 opacity-50 sm:hidden" />
       </Reveal>
-      <motion.div ref={dragRef} className="relative ">
-        <div className="flex h-full w-full flex-col items-center justify-between gap-8  lg:flex-row">
-          <div className="flex h-full basis-2/3 flex-col gap-4 font-light ">
+      <motion.div ref={dragRef} className="relative">
+        <div className="flex h-full w-full flex-col items-center justify-between gap-8 lg:flex-row">
+          <div className="flex h-full basis-2/3 flex-col gap-4 font-light">
             <Reveal>
               <p className="mb-8 text-2xl font-bold md:mb-4">
                 I'm a web developer based in Montreal.
@@ -57,7 +59,7 @@ export const AboutSection = () => {
             <Reveal>
               Since then, I've finished my ACS in web development from College
               Rosemont and done a few projects. I am now{" "}
-              <span className=" bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-bold italic text-transparent">
+              <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-bold italic text-transparent">
                 looking for new opportunities to grow as a React developer.
               </span>
             </Reveal>
@@ -68,9 +70,9 @@ export const AboutSection = () => {
             dragConstraints={dragRef}
             className="right-0 top-0 aspect-square h-60 cursor-grab rounded-2xl active:cursor-grabbing"
           >
-            <Reveal className=" overflow-visible" delay={0.5} initial="right">
+            <Reveal className="overflow-visible" delay={0.5} initial="right">
               <Tilt
-                className="h-full rounded-2xl "
+                className="h-full rounded-2xl"
                 tiltMaxAngleX={10}
                 tiltMaxAngleY={10}
                 lineGlareEnable={false}
@@ -92,46 +94,14 @@ export const AboutSection = () => {
           </motion.div>
         </div>
         <div className="mt-32">
-          <Reveal className="-z-20 w-full ">
+          <Reveal className="-z-20 w-full">
             <h1 className="flex w-full items-center gap-2">
-              <div className="min-w-fit ">Technologies I've worked with</div>
+              <div className="min-w-fit">Technologies I've worked with</div>
               <hr className="-z-20 h-px w-full opacity-50" />
             </h1>
           </Reveal>
           <Reveal className="-z-20">
-            <ul className=" flex flex-wrap pt-4 font-light">
-              {technologies.map((tech) => (
-                <li
-                  className=" flex min-w-fit basis-1/3 items-center pr-2"
-                  key={tech.name}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    className=""
-                  >
-                    <path fill="currentColor" d="m10 7l6 5l-6 5z" />
-                  </svg>
-                  <p>{tech.name}</p>
-                  {tech.favorite && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                      className="ml-1 w-3 translate-y-px text-red-500"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M2 9.137C2 14 6.02 16.591 8.962 18.911C10 19.729 11 20.5 12 20.5s2-.77 3.038-1.59C17.981 16.592 22 14 22 9.138c0-4.863-5.5-8.312-10-3.636C7.5.825 2 4.274 2 9.137"
-                      />
-                    </svg>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <Technologies data={data} />
           </Reveal>
         </div>
       </motion.div>
