@@ -1,7 +1,7 @@
 import remplacementsImg from "@/assets/images/app-remplacements.jpg";
 import peripherieImg from "@/assets/images/site-peripherie.jpg";
 import stars from "@/assets/svgs/Stars.svg";
-import { FeaturedCard } from "@/components/FeaturedCard";
+import { FeaturedCard } from "@/app/(routes)/(home)/components/FeaturedCard";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";

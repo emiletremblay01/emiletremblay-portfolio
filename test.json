@@ -1,0 +1,50 @@
+{
+  "name": "Nadia Pearce",
+  "location": "Akron, OH",
+  "phone": "330-555-8271",
+  "email": "npearce@email.com",
+  "summary": "Detail-oriented REST API developer with seven years of experience. Can thoroughly examine API designs, offer impressive feedback, and clearly communicate with companies throughout the development process. Looking to help Grayson Mobile develop a powerful system for their website as a REST API developer.",
+  "skills": [
+    "Ability to work with JavaScript, HTML and JSON",
+    "Programming language proficiency in Java, C++ and SQL",
+    "Experience with Windows XP, Windows 10 and Unix",
+    "Strong communication expertise and interpersonal skills",
+    "Powerful skills in API development, specifically for web use"
+  ],
+  "workExperience": [
+    {
+      "title": "REST API developer",
+      "company": "Brazen Hills Entertainment",
+      "location": "San Diego, CA",
+      "dates": "2019-Present",
+      "responsibilities": [
+        "Worked with the company remotely to develop API systems for their website.",
+        "Consistently communicated with the company's project manager to ensure the API system was meeting expectations.",
+        "Developed an impressive system that helped the company meet its goals and ensure major success."
+      ]
+    },
+    {
+      "title": "REST API consultant",
+      "company": "Confidential",
+      "location": "Akron, OH",
+      "dates": "2018-2019",
+      "responsibilities": [
+        "Worked directly with a company and its API developer to create REST API designs.",
+        "Used my expertise to offer them feedback and help ensure their end product was successful.",
+        "Increased the overall efficiency of the project by 25%."
+      ]
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Science in computer science",
+    "school": "College of Ohio",
+    "location": "Columbus, OH",
+    "year": 2016
+  },
+  "certifications": [
+    "API Designer, 2017",
+    "API Product Manager, 2017",
+    "Project Management Professional, 2018",
+    "API Security Architect, 2019"
+  ]
+}

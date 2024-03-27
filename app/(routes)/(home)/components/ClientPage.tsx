@@ -11,15 +11,19 @@ import {
   NavigationMenu,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { AboutSection } from "@/components/AboutSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
+import { AboutSection } from "@/app/(routes)/(home)/components/AboutSection";
+import { ProjectsSection } from "@/app/(routes)/(home)/components/ProjectsSection";
 import CursorLight from "@/components/CursorLight";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/app/(routes)/(home)/components/Navbar";
 import ArrowDown from "@/components/arrow-down";
 import { TypeAnimation } from "react-type-animation";
-import { tech } from "@/types";
+import { tech, resume } from "@/types";
 
-export default function Home({ data }: { data: tech[] | null }) {
+export default function ClientPage({
+  technologies,
+}: {
+  technologies: tech[] | null;
+}) {
   const [typingStatus, setTypingStatus] = useState<boolean>(false);
   const [typingFinished, setTypingFinished] = useState<boolean>(false);
   const isMobile = useIsMobile();
@@ -148,7 +152,7 @@ export default function Home({ data }: { data: tech[] | null }) {
           <div className="h-10"></div>
           {/* About */}
           <Element name="about">
-            <AboutSection data={data} />
+            <AboutSection data={technologies} />
           </Element>
           <div className="h-96"></div>
           {/* Work */}

@@ -9,8 +9,9 @@ import {
 } from "@tanstack/react-query";
 import axios from "axios";
 import { getTechnologies } from "@/actions/getTechnologies";
-import Home from "./page";
+import Home from "./(routes)/(home)/page";
 import { tech } from "@/types";
+import { getResume } from "@/actions/getResume";
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
@@ -35,8 +36,13 @@ export default async function RootLayout({
   // } catch (error) {
   //   console.error(error);
   // }
-  const data = await getTechnologies();
+  const technologies = await getTechnologies();
+  const resume = await getResume();
 
+  const props = {
+    technologies,
+    resume,
+  };
   return (
     <html lang="en">
       <body
@@ -44,7 +50,8 @@ export default async function RootLayout({
       >
         {/* <Provider>
           <HydrationBoundary state={dehydrate(queryClient)}> */}
-        <Home data={data} />
+        {/* <Home {...props} /> */}
+        {children}
         {/* </HydrationBoundary>
         </Provider> */}
       </body>
