@@ -15,7 +15,6 @@ export default function Resume({ resume }: { resume: resume }) {
   return (
     <article className="prose mx-auto font-sans">
       <h1>{name}</h1>
-
       <p>
         {location}
         <br />
