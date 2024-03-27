@@ -1,12 +1,12 @@
 "use server";
-
+import { tech } from "@/types";
 import axios from "axios";
-import { resume } from "@/types";
-export async function getResume() {
+
+export async function getTechnologies() {
   try {
     const res = await axios({
       method: "post",
-      url: `${process.env.MONGO_API_URL}/action/findOne`,
+      url: `${process.env.MONGO_API_URL}/action/find`,
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Request-Headers": "*",
@@ -14,14 +14,12 @@ export async function getResume() {
       },
       data: JSON.stringify({
         dataSource: "Cluster0",
-        database: "ResumeDB",
-        collection: "Resume",
-        filter: {
-          _id: { $oid: "66030ded79f7da075b725bfa" },
-        },
+        database: "PortfolioDB",
+        collection: "Technologies",
+        filter: {},
       }),
     });
-    const data: resume = res.data.document;
+    const data: tech[] = res.data.documents;
     return data;
   } catch (error) {
     console.log("[_get]", error);

@@ -17,18 +17,13 @@ import CursorLight from "@/components/CursorLight";
 import Navbar from "@/app/(routes)/(home)/components/Navbar";
 import ArrowDown from "@/components/arrow-down";
 import { TypeAnimation } from "react-type-animation";
-<<<<<<< HEAD:app/(routes)/(home)/components/ClientPage.tsx
-import { tech, resume } from "@/types";
+import { tech } from "@/types";
 
 export default function ClientPage({
   technologies,
 }: {
   technologies: tech[] | null;
 }) {
-=======
-
-export default function Home() {
->>>>>>> parent of d6805ea (added mongo-db api connection):app/page.tsx
   const [typingStatus, setTypingStatus] = useState<boolean>(false);
   const [typingFinished, setTypingFinished] = useState<boolean>(false);
   const isMobile = useIsMobile();
@@ -156,11 +151,7 @@ export default function Home() {
           <div className="h-10"></div>
           {/* About */}
           <Element name="about">
-<<<<<<< HEAD:app/(routes)/(home)/components/ClientPage.tsx
-            <AboutSection data={technologies} />
-=======
-            <AboutSection />
->>>>>>> parent of d6805ea (added mongo-db api connection):app/page.tsx
+            <AboutSection technologies={technologies} />
           </Element>
           <div className="h-96"></div>
           {/* Work */}

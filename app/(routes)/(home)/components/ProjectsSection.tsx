@@ -43,7 +43,7 @@ export const ProjectsSection = () => {
           <a
             className="flex items-stretch "
             target="_blank"
-            href="https://ql-remplacements-app-ngcb.vercel.app/"
+            href="https://remplacement-app-portfoliodb.vercel.app/"
           >
             <FeaturedCard
               {...{
@@ -117,18 +117,15 @@ export const ProjectsSection = () => {
           </div>
           <div className="flex items-center gap-2 md:w-full ">
             <p className="hidden min-w-fit  text-sm font-light md:block">
-              First project using react & tailwind
+              My resume with custom API endpoints
             </p>
             <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block  " />
             <Button
               asChild
               className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
             >
-              <a
-                target="_blank"
-                href="https://portfolio-musique-1nw9zf4yx-emiletremblay01.vercel.app/"
-              >
-                portfolio-musique
+              <a target="_blank" href="/resume">
+                resume
               </a>
             </Button>
           </div>
