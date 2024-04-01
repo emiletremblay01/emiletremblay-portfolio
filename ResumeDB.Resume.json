@@ -1,0 +1,125 @@
+[
+  {
+    "_id": {
+      "$oid": "66030ded79f7da075b725bfa"
+    },
+    "name": "Émile Tremblay",
+    "birthDate": "1998-02-17",
+    "location": "Montreal, QC",
+    "phone": "418 551-8482",
+    "email": "emiletremblay01@gmail.com",
+    "summary": "Detail-oriented React developer with experience in building and maintaining web applications. Skilled in translating designs into functional user interfaces. Dedicated to delivering high-quality products with a focus on excellence. Musician and composer in my free time.",
+    "skills": [
+      "Proficiency in JavaScript, HTML, CSS",
+      "Great communication skills and ability to work in a team",
+      "Keen eye for design and meticulous",
+      "Strong desire to learn and improve, as well as to share knowledge with others",
+      "Highly creative and problem-solving oriented"
+    ],
+    "workExperience": [
+      {
+        "title": "Freelance developer - contract",
+        "company": "Périphérie Le Mag",
+        "location": "Montreal, QC",
+        "dates": "2022-present",
+        "responsibilities": [
+          "Worked with the company to build their website from the ground up.",
+          "Still working with them to maintain and update the website as needed."
+        ],
+        "programmingRelated": true
+      },
+      {
+        "title": "Assistant Manager",
+        "company": "Cineplex Odeon Quartier Latin",
+        "location": "Montreal, QC",
+        "dates": "2022-present",
+        "responsibilities": [
+          "Managed a team of 40 employees.",
+          "Ensured the smooth running of the cinema."
+        ],
+        "programmingRelated": false
+      },
+      {
+        "title": "Co-worker",
+        "company": "IKEA",
+        "location": "Montreal, QC",
+        "dates": "2019-2021",
+        "responsibilities": [
+          "Worked in the living room department.",
+          "Helped customers with their purchases."
+        ],
+        "programmingRelated": false
+      },
+      {
+        "title": "Lead stage technician",
+        "company": "Cegep Saint-Laurent",
+        "location": "Montreal, QC",
+        "dates": "2017-2019",
+        "responsibilities": [
+          "Was in charge of the stage for the Adrienne-Milotte concert hall.",
+          "Answer to the performers' needs, install the equipment etc.",
+          "Mixing the sound during the shows."
+        ],
+        "programmingRelated": false
+      },
+      {
+        "title": "Tour guide",
+        "company": "École de l'Anse",
+        "location": "Notre-Dame-du-Portage, QC",
+        "dates": "2016-2018",
+        "responsibilities": [
+          "Welcome visitors, maintain, administer and animate the site."
+        ],
+        "programmingRelated": false
+      },
+      {
+        "title": "Freelance musician",
+        "company": "Self-employed",
+        "location": "Montreal, QC",
+        "dates": "2015-present",
+        "responsibilities": [
+          "Offer a wide range of musical services here and there, such as:",
+          "Composing music for short films",
+          "Playing piano or DJing at various events",
+          "Recording, mixing and mastering music for other artists",
+          "Releasing my own music",
+          "Teaching music theory and piano",
+          "Arranging music for various ensembles"
+        ],
+        "programmingRelated": false
+      }
+    ],
+    "education": [
+      {
+        "degree": "Web Development ACS",
+        "school": "College Rosemont",
+        "location": "Montreal, QC",
+        "year": "2021-2022"
+      },
+      {
+        "degree": "Professional Music Diploma, Composition",
+        "school": "Cegep Saint-Laurent",
+        "location": "Montreal, QC",
+        "year": "2016-2019"
+      },
+      {
+        "degree": "International Baccalaureate",
+        "school": "Rivière-du-Loup High School",
+        "location": "Rivière-du-Loup, QC",
+        "year": "2010-2015"
+      }
+    ],
+    "certifications": [],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "interests": ["Music", "Cinema", "Video games", "Tennis", "Design"]
+  }
+]

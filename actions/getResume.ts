@@ -16,12 +16,11 @@ export async function getResume() {
         dataSource: "Cluster0",
         database: "ResumeDB",
         collection: "Resume",
-        filter: {
-          _id: { $oid: "66030ded79f7da075b725bfa" },
-        },
+        filter: {},
       }),
     });
-    const data: resume = res.data.document;
+
+    const data: any = res.data.document;
     return data;
   } catch (error) {
     console.log("[_get]", error);
