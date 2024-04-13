@@ -112,6 +112,9 @@ export default function Resume({ resume }: { resume: any }) {
     languages,
   } = resume;
 
+  const tab1 = "programming";
+  const tab2 = "other";
+
   const NonProgrammingRelatedWorkExperiences = workExperience.filter(
     (experience: any) => !experience.programmingRelated,
   );
@@ -128,119 +131,156 @@ export default function Resume({ resume }: { resume: any }) {
     );
   }
   return (
-    <article className=" mx-auto space-y-4 px-4 font-sans text-gray-700">
-      <h1 className="text-4xl font-bold text-gray-900">{name}</h1>
-      <p>
-        {location}
-        <br />
-        {phone}
-        <br />
-        {email}
-      </p>
-      <p>
-        {summary}
-        <span> {formatLanguages(languages)}</span>
-      </p>
-      <h2 className="text-2xl font-bold text-gray-900">Skills</h2>
-      <ul className="space-y-2">
-        {skills.map((skill: any) => (
-          <li className=" pl-4" key={skill}>
-            {skill}
-          </li>
-        ))}
-      </ul>
-      <h2 className="text-2xl font-bold text-gray-900">Work Experience</h2>
-      <Tabs defaultValue="other" className="max-w-[600px]">
-        <TabsList>
-          <TabsTrigger value="programming">Programming-Related</TabsTrigger>
-          <TabsTrigger value="other">Other</TabsTrigger>
-        </TabsList>
-        <TabsContent value="programming">
-          {ProgrammingRelatedWorkExperiences.map((experience: any) => (
-            <div className="space-y-4">
-              <Separator className="" />
-              <div className="space-y-1">
-                <h3 className="text-base ">{experience.title}</h3>
-                <div className="flex h-5 items-center space-x-4 text-sm">
-                  <div>{experience.company}</div>
-                  <Separator orientation="vertical" />
-                  <div>{experience.location}</div>
-                  <Separator orientation="vertical" />
-                  <div>{experience.dates}</div>
-                </div>
-                {experience.responsibilities.map((responsibility: any) => (
-                  <p
-                    className="text-sm text-muted-foreground"
-                    key={responsibility}
-                  >
-                    {responsibility}
-                  </p>
-                ))}
-              </div>
-            </div>
+    <article className=" mx-auto max-w-3xl px-4 font-sans text-gray-700">
+      <section id="name" className="space-y-4 pb-8">
+        <h1 className="pt-8 text-4xl font-bold text-gray-900">{name}</h1>
+        <p>
+          {location}
+          <br />
+          {phone}
+          <br />
+          {email}
+        </p>
+        <p>
+          {summary}
+          <span> {formatLanguages(languages)}</span>
+        </p>
+      </section>
+      <section id="skills" className="space-y-4 pb-8">
+        <h2 className="text-2xl font-bold text-gray-900">Skills</h2>
+        <ul className="space-y-2">
+          {skills.map((skill: any) => (
+            <li className=" pl-4" key={skill}>
+              • {skill}
+            </li>
           ))}
-        </TabsContent>
-        <TabsContent value="other" className="space-y-4">
-          {" "}
-          {NonProgrammingRelatedWorkExperiences.map((experience: any) => (
-            <div className="rounded border p-2">
-              {/* <Separator className="" /> */}
-              <div className="space-y-2">
-                <h3 className="text-lg leading-none text-gray-900">
-                  {experience.title}
-                </h3>
-                <div className="flex h-5 items-center space-x-4 text-sm">
-                  <div>{experience.company}</div>
-                  <Separator orientation="vertical" />
-                  <div>{experience.location}</div>
-                  <Separator orientation="vertical" />
-                  <div>{experience.dates}</div>
-                </div>
-                <div>
-                  {experience.responsibilities.map((responsibility: any) => (
-                    <p className=" pl-4 text-sm " key={responsibility}>
-                      {responsibility}
-                    </p>
-                  ))}
+        </ul>
+      </section>
+      <section id="workexperience" className="space-y-4 pb-8">
+        <h2 className="text-2xl font-bold text-gray-900">Work Experience</h2>
+        <Tabs defaultValue={tab2} className="">
+          <TabsList className="mb-4 border bg-gray-100">
+            <TabsTrigger key={tab1} value={tab1}>
+              Programming-Related
+            </TabsTrigger>
+            <TabsTrigger key={tab2} value={tab2}>
+              Other
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent key={tab1} value={tab1}>
+            {ProgrammingRelatedWorkExperiences.map((experience: any) => (
+              <div key={experience.title!} className="rounded border p-4">
+                {/* <Separator className="" /> */}
+                <div className="relative space-y-2">
+                  <div className="flex flex-wrap items-center justify-between gap-1">
+                    <h3 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
+                      {experience.title}
+                    </h3>
+                    <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+                      <div>{experience.company}</div>
+                      <Separator orientation="vertical" />
+                      <div>{experience.location}</div>
+                      <Separator orientation="vertical" />
+                      <div>{experience.dates}</div>
+                    </div>
+                  </div>
+                  <Separator className="" />
+                  <div className="pt-2">
+                    {experience.responsibilities.map((responsibility: any) => (
+                      <p
+                        className="text-sm text-gray-500 "
+                        key={responsibility}
+                      >
+                        • {responsibility}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </TabsContent>
-      </Tabs>
+            ))}
+          </TabsContent>
+          <TabsContent value={tab2} key={tab2} className="space-y-4">
+            {NonProgrammingRelatedWorkExperiences.map((experience: any) => (
+              <div
+                key={experience.title!}
+                className="rounded border p-4 hover:bg-gray-100"
+              >
+                {/* <Separator className="" /> */}
+                <div className="relative space-y-2">
+                  <div className="flex flex-wrap items-center justify-between gap-1">
+                    <h3 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
+                      {experience.title}
+                    </h3>
+                    <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+                      <div>{experience.company}</div>
+                      <Separator orientation="vertical" />
+                      <div>{experience.location}</div>
+                      <Separator orientation="vertical" />
+                      <div>{experience.dates}</div>
+                    </div>
+                  </div>
+                  <Separator className="" />
+                  <div className="pt-2">
+                    {experience.responsibilities.map((responsibility: any) => (
+                      <p
+                        className=" text-sm text-gray-500 "
+                        key={responsibility}
+                      >
+                        • {responsibility}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </TabsContent>
+        </Tabs>
+      </section>
 
-      <h2>Education</h2>
-      {education.map((education: any) => (
-        <div key={education.degree}>
-          <h4>{education.degree}</h4>
-          <p>
-            {education.school}
-            <br />
-            {education.location}
-            <br />
-            {education.year}
-          </p>
-        </div>
-      ))}
+      <section id="education" className="space-y-4 pb-8">
+        <h2 className="text-2xl font-bold text-gray-900">Education</h2>
+        {education.map((education: any) => (
+          <div
+            className="flex flex-wrap items-center justify-between gap-1 rounded border p-4"
+            key={education.degree}
+          >
+            <h4 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
+              {education.degree}
+            </h4>
+            <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+              <div>{education.school}</div>
+              {/* <Separator orientation="vertical" />
+              <div>{education.location}</div> */}
+              <Separator orientation="vertical" />
+              <div>{education.year}</div>
+            </div>
+          </div>
+        ))}
+      </section>
       {certifications.length > 0 && (
-        <>
-          <h2>Certifications</h2>
+        <section className=" space-y-4 pb-8">
+          <h2 className="text-2xl font-bold text-gray-900">Certifications</h2>
           <ul>
             {certifications.map((certification: any) => (
               <li key={certification}>{certification}</li>
             ))}
           </ul>
-        </>
+        </section>
       )}
       {interests.length > 0 && (
-        <>
-          <h2>Interests</h2>
-          <ul>
+        <section className="space-y-4 pb-8">
+          <h2 className="text-2xl font-bold text-gray-900">Interests</h2>
+          <ul className="flex flex-wrap gap-2">
             {interests.map((interest: any) => (
-              <li key={interest}>{interest}</li>
+              <li
+                key={interest}
+                className="flex-auto rounded-xl border px-4 py-2 text-center text-sm "
+              >
+                {interest}
+              </li>
             ))}
           </ul>
-        </>
+        </section>
       )}
     </article>
   );
