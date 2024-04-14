@@ -172,11 +172,11 @@ export default function Resume({ resume }: { resume: any }) {
               <div key={experience.title!} className="rounded border p-4">
                 {/* <Separator className="" /> */}
                 <div className="relative space-y-2">
-                  <div className="flex flex-wrap items-center justify-between gap-1">
+                  <div className="md:flex md:items-center md:justify-between md:gap-1">
                     <h3 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
                       {experience.title}
                     </h3>
-                    <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+                    <div className="overflow-hidden flex h-5 shrink-0 items-center space-x-4 text-sm">
                       <div>{experience.company}</div>
                       <Separator orientation="vertical" />
                       <div>{experience.location}</div>
@@ -207,11 +207,11 @@ export default function Resume({ resume }: { resume: any }) {
               >
                 {/* <Separator className="" /> */}
                 <div className="relative space-y-2">
-                  <div className="flex flex-wrap items-center justify-between gap-1">
+                  <div className="md:flex md:items-center md:justify-between md:gap-1">
                     <h3 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
                       {experience.title}
                     </h3>
-                    <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+                    <div className="overflow-hidden flex h-5 shrink-0 items-center space-x-4 text-sm">
                       <div>{experience.company}</div>
                       <Separator orientation="vertical" />
                       <div>{experience.location}</div>
