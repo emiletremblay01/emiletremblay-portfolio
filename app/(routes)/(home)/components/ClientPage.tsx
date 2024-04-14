@@ -5,7 +5,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import { cn } from "@/lib/utils";
 import useIsMobile from "@/hooks/useIsMobile";
-
+import { useRouter } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import {
   NavigationMenu,
@@ -27,6 +27,7 @@ export default function ClientPage({
   const [typingStatus, setTypingStatus] = useState<boolean>(false);
   const [typingFinished, setTypingFinished] = useState<boolean>(false);
   const isMobile = useIsMobile();
+  const router = useRouter();
   const changeScrollOffset = () => (isMobile ? -50 : -200);
 
   useEffect(() => {
@@ -85,6 +86,16 @@ export default function ClientPage({
                     </p>
                   </div>
                 </ScrollLink>
+              </NavigationMenuList>
+              <NavigationMenuList>
+                <div
+                  onClick={() => router.push("/resume")}
+                  className="group px-4 py-2"
+                >
+                  <p className="relative cursor-pointer font-light tracking-tight text-gray-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-[0%] after:rounded-sm after:bg-teal-400 after:duration-300 after:content-[''] group-hover:text-teal-400 group-hover:after:w-full">
+                    Resume
+                  </p>
+                </div>
               </NavigationMenuList>
             </div>
           </NavigationMenu>

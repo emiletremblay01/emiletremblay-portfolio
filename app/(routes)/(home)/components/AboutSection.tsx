@@ -107,11 +107,11 @@ export const AboutSection = ({
             </h1>
           </Reveal>
           <Reveal className="-z-20">
-            <ul className=" flex flex-wrap gap-2 pt-4 font-light">
+            <ul className="flex flex-wrap gap-2 pt-4 font-light lg:justify-between">
               {technologies &&
                 technologies.map((tech) => (
                   <li
-                    className="inline-block min-w-fit flex-auto items-center rounded-2xl border border-gray-600 p-2 text-center"
+                    className="inline-block min-w-fit flex-auto items-center rounded-2xl border border-gray-600 p-2 text-center md:flex-initial md:basis-1/6"
                     key={tech.name}
                   >
                     <svg

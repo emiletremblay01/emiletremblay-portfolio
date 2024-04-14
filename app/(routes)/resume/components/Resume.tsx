@@ -295,6 +295,7 @@ export default function Resume({ resume }: { resume: any }) {
           </ul>
         </section>
       )}
+      <section id="api"></section>
     </article>
   );
 }

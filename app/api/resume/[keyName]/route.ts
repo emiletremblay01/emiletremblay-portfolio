@@ -16,12 +16,29 @@ export async function GET(
       return new NextResponse("Not Found", { status: 404 });
     }
 
-    if (!(keyName in resume)) {
-      return new NextResponse("Endpoint does not exist", { status: 404 });
-    }
+    switch (keyName) {
+      case "about":
+        const { name, birthDate, location, phone, email, summary } = resume;
+        return NextResponse.json({
+          name,
+          birthDate,
+          location,
+          phone,
+          email,
+          summary,
+        });
 
-    const data = resume[keyName as keyof typeof resume];
-    return NextResponse.json(data);
+      case "skills":
+        return NextResponse.json(resume.skills);
+      case "work-experience":
+        return NextResponse.json(resume.workExperience);
+      case "education":
+        return NextResponse.json(resume.education);
+      case "interests":
+        return NextResponse.json(resume.interests);
+      default:
+        return new NextResponse("Not Found", { status: 404 });
+    }
   } catch (error) {
     console.log("[product_GET]", error);
     return new NextResponse("Internal Server Error", { status: 500 });
