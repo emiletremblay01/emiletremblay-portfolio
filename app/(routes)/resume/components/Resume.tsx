@@ -169,26 +169,34 @@ export default function Resume({ resume }: { resume: any }) {
           </TabsList>
           <TabsContent key={tab1} value={tab1}>
             {ProgrammingRelatedWorkExperiences.map((experience: any) => (
-              <div key={experience.title!} className="rounded border p-4">
+              <div
+                key={experience.title!}
+                className="rounded border p-4 hover:bg-gray-100"
+              >
                 {/* <Separator className="" /> */}
                 <div className="relative space-y-2">
-                  <div className="md:flex md:items-center md:justify-between md:gap-1">
+                  <div className=" md:flex md:flex-wrap md:items-center md:justify-between md:gap-1">
                     <h3 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
                       {experience.title}
                     </h3>
-                    <div className="overflow-hidden flex h-5 shrink-0 items-center space-x-4 text-sm">
-                      <div>{experience.company}</div>
+                    <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+                      <div className="truncate">{experience.company}</div>
+                      <Separator
+                        className="hidden sm:block"
+                        orientation="vertical"
+                      />
+                      <div className="hidden sm:block">
+                        {experience.location}
+                      </div>
                       <Separator orientation="vertical" />
-                      <div>{experience.location}</div>
-                      <Separator orientation="vertical" />
-                      <div>{experience.dates}</div>
+                      <div className="shrink-0">{experience.dates}</div>
                     </div>
                   </div>
                   <Separator className="" />
                   <div className="pt-2">
                     {experience.responsibilities.map((responsibility: any) => (
                       <p
-                        className="text-sm text-gray-500 "
+                        className=" text-sm text-gray-500 "
                         key={responsibility}
                       >
                         • {responsibility}
@@ -207,16 +215,21 @@ export default function Resume({ resume }: { resume: any }) {
               >
                 {/* <Separator className="" /> */}
                 <div className="relative space-y-2">
-                  <div className="md:flex md:items-center md:justify-between md:gap-1">
+                  <div className=" md:flex md:flex-wrap md:items-center md:justify-between md:gap-1">
                     <h3 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
                       {experience.title}
                     </h3>
-                    <div className="overflow-hidden flex h-5 shrink-0 items-center space-x-4 text-sm">
-                      <div>{experience.company}</div>
+                    <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
+                      <div className="truncate">{experience.company}</div>
+                      <Separator
+                        className="hidden sm:block"
+                        orientation="vertical"
+                      />
+                      <div className="hidden sm:block">
+                        {experience.location}
+                      </div>
                       <Separator orientation="vertical" />
-                      <div>{experience.location}</div>
-                      <Separator orientation="vertical" />
-                      <div>{experience.dates}</div>
+                      <div className="shrink-0">{experience.dates}</div>
                     </div>
                   </div>
                   <Separator className="" />
@@ -241,18 +254,18 @@ export default function Resume({ resume }: { resume: any }) {
         <h2 className="text-2xl font-bold text-gray-900">Education</h2>
         {education.map((education: any) => (
           <div
-            className="flex flex-wrap items-center justify-between gap-1 rounded border p-4"
+            className="rounded border p-4 md:flex md:items-center md:justify-between md:gap-1"
             key={education.degree}
           >
             <h4 className="shrink-0 text-lg font-semibold leading-none text-gray-900">
               {education.degree}
             </h4>
-            <div className="item flex h-5 shrink-0 items-center space-x-4 text-sm">
-              <div>{education.school}</div>
+            <div className="flex h-5 shrink-0 items-center space-x-4 text-sm">
+              <div className="truncate">{education.school}</div>
               {/* <Separator orientation="vertical" />
               <div>{education.location}</div> */}
               <Separator orientation="vertical" />
-              <div>{education.year}</div>
+              <div className=" shrink-0">{education.year}</div>
             </div>
           </div>
         ))}
