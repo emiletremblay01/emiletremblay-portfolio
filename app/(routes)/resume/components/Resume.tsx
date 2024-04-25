@@ -4,6 +4,10 @@ import { Card } from "@/components/ui/card-hover-effect";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { WorkExperienceCard } from "./WorkExperienceCard";
 import { Separator } from "@/components/ui/separator";
+import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export default function Resume({ resume }: { resume: any }) {
   // {
   //   _id: '66030ded79f7da075b725bfa',
@@ -132,6 +136,13 @@ export default function Resume({ resume }: { resume: any }) {
   }
   return (
     <article className=" mx-auto max-w-3xl px-4 font-sans text-gray-700">
+      <div className="w-full pb-10">
+        <Button asChild variant="outline" className="p-2 border-none">
+          <Link href="/">
+            <ArrowLeft className="size-6" />
+          </Link>
+        </Button>
+      </div>
       <section id="name" className="space-y-4 pb-8">
         <h1 className="pt-8 text-4xl font-bold text-gray-900">{name}</h1>
         <p>
