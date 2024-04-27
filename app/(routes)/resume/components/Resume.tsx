@@ -7,8 +7,21 @@ import { Separator } from "@/components/ui/separator";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { useState } from "react";
+import { ApiList } from "@/components/ui/api-list";
+export function SwitchDemo() {
+  return (
+    <div className="flex items-center space-x-2">
+      <Switch id="airplane-mode" />
+      <Label htmlFor="airplane-mode">Airplane Mode</Label>
+    </div>
+  );
+}
 
 export default function Resume({ resume }: { resume: any }) {
+  const [isApiShown, setIsApiShown] = useState(false);
   // {
   //   _id: '66030ded79f7da075b725bfa',
   //   name: 'Émile Tremblay',
@@ -102,6 +115,9 @@ export default function Resume({ resume }: { resume: any }) {
   //   interests: [ 'Music', 'Cinema', 'Video games', 'Tennis', 'Design' ]
 
   // }
+  const toggleApi = () => {
+    setIsApiShown(!isApiShown);
+  };
   const {
     name,
     location,
@@ -136,13 +152,26 @@ export default function Resume({ resume }: { resume: any }) {
   }
   return (
     <article className=" mx-auto max-w-3xl px-4 font-sans text-gray-700">
-      <div className="w-full pb-10">
-        <Button asChild variant="outline" className="p-2 border-none">
+      <div className="flex w-full justify-between">
+        <Button
+          asChild
+          variant="outline"
+          className="border-none bg-inherit p-2"
+        >
           <Link href="/">
             <ArrowLeft className="size-6" />
           </Link>
         </Button>
+        <div className="flex items-center space-x-2">
+          <Label htmlFor="api-display">Show API endpoints</Label>
+          <Switch
+            checked={isApiShown}
+            onCheckedChange={toggleApi}
+            id="api-display"
+          />
+        </div>
       </div>
+      {isApiShown && <ApiList />}
       <section id="name" className="space-y-4 pb-8">
         <h1 className="pt-8 text-4xl font-bold text-gray-900">{name}</h1>
         <p>

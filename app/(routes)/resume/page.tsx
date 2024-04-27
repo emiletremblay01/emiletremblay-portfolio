@@ -1,6 +1,6 @@
 import { getResume } from "@/actions/getResume";
 import Resume from "./components/Resume";
-
+import { Toaster } from "react-hot-toast";
 export default async function ResumePage() {
   const resume = await getResume();
   if (!resume) {
@@ -10,6 +10,7 @@ export default async function ResumePage() {
   return (
     <div className="bg-gray-50 py-4">
       <Resume resume={resume} />
+      <Toaster />
     </div>
   );
 }

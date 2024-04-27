@@ -44,7 +44,7 @@ export default function ClientPage({
         {/* Navigation */}
         <Navbar isReadyToMount={typingFinished}>
           <NavigationMenu className="flex px-10 py-6">
-            <div className="flex gap-6 rounded-2xl shadow-md backdrop-blur sm:gap-10">
+            <div className="flex gap-0 rounded-2xl shadow-md backdrop-blur sm:gap-10">
               <NavigationMenuList className="">
                 <ScrollLink
                   className="cursor-pointer"
