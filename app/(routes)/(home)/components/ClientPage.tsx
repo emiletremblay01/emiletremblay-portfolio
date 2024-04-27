@@ -18,31 +18,25 @@ import Navbar from "@/app/(routes)/(home)/components/Navbar";
 import ArrowDown from "@/components/arrow-down";
 import { TypeAnimation } from "react-type-animation";
 import { tech } from "@/types";
-
+import { HeroSection } from "./HeroSection";
+import { getIntroDone, setIntroDone } from "@/hooks/useIntroStore";
 export default function ClientPage({
   technologies,
 }: {
   technologies: tech[] | null;
 }) {
-  const [typingStatus, setTypingStatus] = useState<boolean>(false);
-  const [typingFinished, setTypingFinished] = useState<boolean>(false);
+  const isIntroDone = getIntroDone();
+
   const isMobile = useIsMobile();
   const router = useRouter();
   const changeScrollOffset = () => (isMobile ? -50 : -200);
 
-  useEffect(() => {
-    if (typingFinished) {
-      document.body.style.overflow = "";
-      return;
-    }
-    document.body.style.overflow = "hidden";
-  }, [typingFinished]);
   return (
     <>
       {!isMobile && <CursorLight />}
       <ParallaxProvider>
         {/* Navigation */}
-        <Navbar isReadyToMount={typingFinished}>
+        <Navbar isReadyToMount={isIntroDone}>
           <NavigationMenu className="flex px-10 py-6">
             <div className="flex gap-0 rounded-2xl shadow-md backdrop-blur sm:gap-10">
               <NavigationMenuList className="">
@@ -104,61 +98,11 @@ export default function ClientPage({
         {/* Content */}
         <div className="px-6 sm:px-24">
           {/* Hero */}
-          <section className="relative h-screen">
-            <div className="absolute bottom-1/2 left-1/2 flex h-20 w-full -translate-x-1/2 flex-col items-center justify-center">
-              <TypeAnimation
-                sequence={[
-                  "Hi,",
-                  200,
-                  "Hi, my name is Emile Tremblay.",
-                  300,
-
-                  () => {
-                    setTypingStatus(true);
-                  },
-                ]}
-                speed={60}
-                wrapper="span"
-                cursor={false}
-                repeat={0}
-                style={{
-                  whiteSpace: "pre-line",
-                }}
-                className="flex-none text-sm sm:text-lg"
-              />
-              <div className="h-10">
-                {typingStatus && (
-                  <TypeAnimation
-                    sequence={[
-                      "I create things for the web.",
-                      () => {
-                        setTypingFinished(true);
-                      },
-                    ]}
-                    wrapper="span"
-                    cursor={false}
-                    speed={60}
-                    repeat={0}
-                    style={{
-                      whiteSpace: "pre-line",
-                    }}
-                    className="text-center text-xs sm:text-base"
-                  />
-                )}
-              </div>
-            </div>
-            <div className="absolute bottom-0 flex w-full justify-center">
-              {/* Arrow */}
-              <ScrollLink
-                to="about"
-                className={cn("cursor-pointer", !typingFinished && "opacity-0")}
-                offset={changeScrollOffset()}
-                smooth
-              >
-                <ArrowDown />
-              </ScrollLink>
-            </div>
-          </section>
+          <HeroSection>
+            <ScrollLink to="about" offset={changeScrollOffset()} smooth>
+              <ArrowDown />
+            </ScrollLink>
+          </HeroSection>
           <div className="h-10"></div>
           {/* About */}
           <Element name="about">
