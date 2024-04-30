@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
+import Link from "next/link";
 export const ProjectsSection = () => {
   return (
     <section className="relative m-auto max-w-5xl items-center rounded-2xl text-sm  sm:p-8 sm:shadow-md md:text-base ">
@@ -40,7 +41,7 @@ export const ProjectsSection = () => {
       </Reveal>
       <Reveal className=" mx-auto overflow-visible">
         <motion.div className=" flex h-full w-full flex-col items-center justify-between gap-8 pb-16 lg:flex-row lg:items-stretch">
-          <a
+          <Link
             className="flex items-stretch "
             target="_blank"
             href="https://remplacement-app-portfoliodb.vercel.app/"
@@ -56,8 +57,8 @@ export const ProjectsSection = () => {
               }}
               className="relative w-full max-w-md border-pink-500 shadow-md"
             ></FeaturedCard>
-          </a>
-          <a
+          </Link>
+          <Link
             className="flex items-stretch "
             target="_blank"
             href="https://peripherie-website.vercel.app/"
@@ -73,7 +74,7 @@ export const ProjectsSection = () => {
               }}
               className="relative h-full w-full max-w-md border-violet-500 shadow-md"
             ></FeaturedCard>
-          </a>
+          </Link>
         </motion.div>
       </Reveal>
       <Reveal>
@@ -90,12 +91,12 @@ export const ProjectsSection = () => {
               asChild
               className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
             >
-              <a
+              <Link
                 target="_blank"
                 href="https://peri-admin-dashboard.vercel.app/"
               >
                 dashboard
-              </a>
+              </Link>
             </Button>
           </div>
           <div className="flex items-center gap-2 md:w-full ">
@@ -107,12 +108,12 @@ export const ProjectsSection = () => {
               asChild
               className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
             >
-              <a
+              <Link
                 target="_blank"
                 href="https://github.com/dangrenier83/ProjetFinal"
               >
                 projet-final
-              </a>
+              </Link>
             </Button>
           </div>
           <div className="flex items-center gap-2 md:w-full ">
@@ -124,9 +125,7 @@ export const ProjectsSection = () => {
               asChild
               className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
             >
-              <a target="_blank" href="/resume">
-                resume
-              </a>
+              <Link href="/resume">resume</Link>
             </Button>
           </div>
         </div>
