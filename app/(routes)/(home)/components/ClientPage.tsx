@@ -108,12 +108,12 @@ export default function ClientPage({
           <Element name="about">
             <AboutSection technologies={technologies} />
           </Element>
-          <div className="h-96"></div>
+          <div className=" h-60"></div>
           {/* Work */}
           <Element name="work">
             <ProjectsSection />
           </Element>
-          <div className="h-96"></div>
+          <div className=" h-60"></div>
           {/* Contact */}
           <Element name="contact">
             <Reveal className="mx-auto">
@@ -162,7 +162,7 @@ export default function ClientPage({
               </div>
             </Reveal>
           </Element>
-          <div className="h-96"></div>
+          <div className=" h-60"></div>
         </div>
       </ParallaxProvider>
     </>
