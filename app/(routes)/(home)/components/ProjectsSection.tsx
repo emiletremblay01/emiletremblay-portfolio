@@ -42,7 +42,7 @@ export const ProjectsSection = () => {
       <Reveal className=" mx-auto overflow-visible">
         <motion.div className=" flex h-full w-full flex-col items-center justify-between gap-8 pb-16 lg:flex-row lg:items-stretch">
           <Link
-            className="flex items-stretch "
+            className="flex items-stretch"
             target="_blank"
             href="https://remplacement-app-portfoliodb.vercel.app/"
           >
@@ -84,24 +84,24 @@ export const ProjectsSection = () => {
         <div className="flex w-full flex-row flex-wrap justify-normal gap-2 md:flex-col">
           <div className="flex items-center gap-2 md:w-full ">
             <p className="hidden min-w-fit  text-sm font-light md:block">
-              The dashboard used for peripherie's website
+              The dashboard used for my friend's portfolio
             </p>
-            <hr className=" hidden h-px w-full bg-gray-300 opacity-50 md:block" />
+            <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block" />
             <Button
               asChild
               className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
             >
               <Link
                 target="_blank"
-                href="https://peri-admin-dashboard.vercel.app/"
+                href="https://dashboard-vito-final.vercel.app/"
               >
-                dashboard
+                dashboard-vito
               </Link>
             </Button>
           </div>
           <div className="flex items-center gap-2 md:w-full ">
-            <p className="hidden min-w-fit  text-sm font-light md:block">
-              The final team project of my ACS
+            <p className="hidden min-w-fit text-sm font-light md:block">
+              Custom portfolio for a friend
             </p>
             <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block  " />
             <Button
@@ -110,9 +110,9 @@ export const ProjectsSection = () => {
             >
               <Link
                 target="_blank"
-                href="https://github.com/dangrenier83/ProjetFinal"
+                href="https://portfolio-vito.vercel.app/"
               >
-                projet-final
+                portfolio-vito
               </Link>
             </Button>
           </div>
@@ -128,6 +128,7 @@ export const ProjectsSection = () => {
               <Link href="/resume">resume</Link>
             </Button>
           </div>
+          
         </div>
       </Reveal>
     </section>
