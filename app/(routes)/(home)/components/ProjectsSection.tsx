@@ -83,6 +83,20 @@ export const ProjectsSection = () => {
       <Reveal className="w-full">
         <div className="flex w-full flex-row flex-wrap justify-normal gap-2 md:flex-col">
           <div className="flex items-center gap-2 md:w-full ">
+            <p className="hidden min-w-fit text-sm font-light md:block">
+              Custom portfolio for a friend
+            </p>
+            <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block  " />
+            <Button
+              asChild
+              className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
+            >
+              <Link target="_blank" href="https://portfolio-vito.vercel.app/">
+                portfolio-vito
+              </Link>
+            </Button>
+          </div>
+          <div className="flex items-center gap-2 md:w-full ">
             <p className="hidden min-w-fit  text-sm font-light md:block">
               The dashboard used for my friend's portfolio
             </p>
@@ -100,8 +114,8 @@ export const ProjectsSection = () => {
             </Button>
           </div>
           <div className="flex items-center gap-2 md:w-full ">
-            <p className="hidden min-w-fit text-sm font-light md:block">
-              Custom portfolio for a friend
+            <p className="hidden min-w-fit  text-sm font-light md:block">
+              An app for managing poster requests at Cineplex
             </p>
             <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block  " />
             <Button
@@ -110,25 +124,12 @@ export const ProjectsSection = () => {
             >
               <Link
                 target="_blank"
-                href="https://portfolio-vito.vercel.app/"
+                href="https://demandes-posters-app.vercel.app/"
               >
-                portfolio-vito
+                demande-poster-app
               </Link>
             </Button>
           </div>
-          <div className="flex items-center gap-2 md:w-full ">
-            <p className="hidden min-w-fit  text-sm font-light md:block">
-              My resume with custom API endpoints
-            </p>
-            <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block  " />
-            <Button
-              asChild
-              className="grow-0 rounded-2xl border border-teal-300 bg-transparent hover:border-transparent hover:bg-teal-300  hover:text-gray-700"
-            >
-              <Link href="/resume">resume</Link>
-            </Button>
-          </div>
-          
         </div>
       </Reveal>
     </section>
