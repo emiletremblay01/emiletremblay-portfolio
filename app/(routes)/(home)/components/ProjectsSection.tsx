@@ -1,3 +1,4 @@
+"use client";
 import remplacementsImg from "@/assets/images/app-remplacements.jpg";
 import peripherieImg from "@/assets/images/site-peripherie.jpg";
 import stars from "@/assets/svgs/Stars.svg";
@@ -8,9 +9,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
+import { useScroll, useTransform, useSpring } from "framer-motion";
 export const ProjectsSection = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [160, 0]);
+  const springY = useSpring(y, {
+    stiffness: 130,
+    damping: 30,
+  });
   return (
-    <section className="relative m-auto max-w-5xl items-center rounded-2xl text-sm  sm:p-8 sm:shadow-md md:text-base ">
+    <motion.div
+      style={{ y: springY }}
+      className="relative m-auto max-w-5xl items-center rounded-2xl text-sm  sm:p-8 sm:shadow-md md:text-base "
+    >
       <div className="absolute left-0 top-0 -z-30 h-full w-full">
         <Reveal className=" h-full w-full  " distance={0} delay={0.9}>
           <div className="absolute h-full w-full  sm:rounded-2xl sm:border sm:border-white sm:border-opacity-50"></div>
@@ -132,6 +143,6 @@ export const ProjectsSection = () => {
           </div>
         </div>
       </Reveal>
-    </section>
+    </motion.div>
   );
 };

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Tilt from "react-next-tilt";
 import { Parallax } from "react-scroll-parallax";
@@ -7,21 +7,28 @@ import profilpic from "@/assets/images/profilpic.png";
 import stars from "@/assets/svgs/Stars.svg";
 import Image from "next/image";
 import { tech } from "@/types";
-
 import { Reveal } from "@/components/Reveal";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+
 export const AboutSection = ({
   technologies,
 }: {
   technologies: tech[] | null;
 }) => {
-  const router = useRouter();
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [90, 0]);
+  const springY = useSpring(y, {
+    stiffness: 130,
+    damping: 30,
+  });
+
   const dragRef = useRef<HTMLDivElement>(null);
   return (
-    <section className="relative m-auto max-w-5xl items-center text-sm sm:p-8 sm:shadow-md md:text-base ">
+    <motion.div
+      style={{ y: springY }}
+      className="relative m-auto max-w-5xl items-center text-sm sm:p-8 sm:shadow-md md:text-base "
+    >
       <div className="absolute left-0 top-0 -z-30 h-full w-full">
-        <Reveal className=" h-full w-full  " distance={0} delay={0.9}>
+        <Reveal className=" h-full w-full" distance={0} delay={0.9}>
           <div className="absolute h-full w-full  sm:rounded-2xl sm:border sm:border-white sm:border-opacity-50"></div>
         </Reveal>
       </div>
@@ -64,9 +71,10 @@ export const AboutSection = ({
             </Reveal>
             <Reveal>
               Since then, I've finished my ACS in web development from College
-              Rosemont and done a few projects. I am now{" "}
-              <span className=" bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-bold italic text-transparent">
-                looking for new opportunities to grow as a React developer.
+              Rosemont and done a few projects.
+              <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-lg font-bold italic text-transparent">
+                I am currently looking for new opportunities to grow as a
+                developer.
               </span>
             </Reveal>
           </div>
@@ -146,6 +154,6 @@ export const AboutSection = ({
           </Reveal>
         </div>
       </motion.div>
-    </section>
+    </motion.div>
   );
 };

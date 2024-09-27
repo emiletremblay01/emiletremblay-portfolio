@@ -29,7 +29,7 @@ export default function ClientPage({
 
   const isMobile = useIsMobile();
   const router = useRouter();
-  const changeScrollOffset = () => (isMobile ? -50 : -200);
+  const changeScrollOffset = () => (isMobile ? -10 : -130);
 
   return (
     <>

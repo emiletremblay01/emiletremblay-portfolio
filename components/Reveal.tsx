@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useInView, useAnimation, MotionStyle } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface RevealProps {
@@ -8,6 +8,7 @@ interface RevealProps {
   delay?: number;
   initial?: "bottom" | "right" | "left";
   distance?: number;
+  style?: MotionStyle;
 }
 
 export const Reveal = ({
@@ -16,6 +17,7 @@ export const Reveal = ({
   delay = 0.3,
   initial = "bottom",
   distance = 75,
+  style,
 }: RevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
@@ -29,6 +31,7 @@ export const Reveal = ({
   return (
     <div ref={ref} className={cn("relative w-fit overflow-hidden", className)}>
       <motion.div
+        style={style}
         variants={{
           bottom: {
             opacity: 0,
@@ -52,7 +55,7 @@ export const Reveal = ({
         animate={mainControls}
         transition={{ duration: 0.5, ease: "easeInOut", delay: delay }}
       >
-        {children}
+        {style ? <motion.div style={style}>{children}</motion.div> : children}
       </motion.div>
     </div>
   );
