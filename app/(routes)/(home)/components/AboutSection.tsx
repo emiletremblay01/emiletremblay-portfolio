@@ -99,7 +99,7 @@ export const AboutSection = ({
                       alt="Emile Tremblay"
                       layout="fill"
                       objectFit="cover"
-                      className="pointer-events-none rounded-2xl opacity-30"
+                      className="pointer-events-none rounded-2xl opacity-90"
                     />
                   </div>
                 </div>
