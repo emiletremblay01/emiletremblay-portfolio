@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Tilt from "react-next-tilt";
 import { Parallax } from "react-scroll-parallax";
-import profilpic from "@/assets/images/profilpic.png";
+import profilpic from "@/assets/images/profilpic.jpg";
 import stars from "@/assets/svgs/Stars.svg";
 import Image from "next/image";
 import { tech } from "@/types";
