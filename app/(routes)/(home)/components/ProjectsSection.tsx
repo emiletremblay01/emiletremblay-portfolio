@@ -1,5 +1,5 @@
 "use client";
-import remplacementsImg from "@/assets/images/app-remplacements.jpg";
+import posterImg from "@/assets/images/poster.jpg";
 import peripherieImg from "@/assets/images/site-peripherie.jpg";
 import stars from "@/assets/svgs/Stars.svg";
 import { FeaturedCard } from "@/app/(routes)/(home)/components/FeaturedCard";
@@ -55,15 +55,15 @@ export const ProjectsSection = () => {
           <Link
             className="flex items-stretch"
             target="_blank"
-            href="https://remplacement-app-portfoliodb.vercel.app/"
+            href="https://demandes-posters-app.vercel.app/"
           >
             <FeaturedCard
               {...{
-                name: "remplacements-app",
+                name: "demande-poster-app",
                 description:
-                  "A web app I created for my job at Cineplex to help our team manage replacements demands. Is currently used by the manager team. Has an intuitive, clean interface and a dark mode toggle.",
-                imgUrl: remplacementsImg,
-                imgAlt: "remplacements website",
+                  "An app I created for my job at Cineplex to help our team manage poster requests. Is currently used by the manager team. Has an intuitive, clean interface and a dark mode toggle.",
+                imgUrl: posterImg,
+                imgAlt: "demande-poster-app",
                 color: "group-hover:text-pink-500",
               }}
               className="relative w-full max-w-md border-pink-500 shadow-md"
@@ -126,7 +126,7 @@ export const ProjectsSection = () => {
           </div>
           <div className="flex items-center gap-2 md:w-full ">
             <p className="hidden min-w-fit  text-sm font-light md:block">
-              An app for managing poster requests at Cineplex
+              An app for managing replacements requests at Cineplex
             </p>
             <hr className="hidden h-px w-full bg-gray-300 opacity-50 md:block  " />
             <Button
@@ -135,9 +135,9 @@ export const ProjectsSection = () => {
             >
               <Link
                 target="_blank"
-                href="https://demandes-posters-app.vercel.app/"
+                href="https://remplacement-app-portfoliodb.vercel.app/"
               >
-                demande-poster-app
+                remplacements-app
               </Link>
             </Button>
           </div>
