@@ -190,6 +190,17 @@ export default function ResumeMusic() {
         <h1 className="pt-8 text-4xl font-bold text-gray-900">
           Émile Tremblay
         </h1>
+        <p className="text-lg font-semibold text-gray-900">
+          Audio Engineer & Music Producer
+        </p>
+        <p>
+          Montréal, QC
+          <br />
+          418 551-8482
+          <br />
+          emile.t.business@gmail.com
+        </p>
+
         <p>
           Versatile and hands-on audio professional with a background in jazz
           composition and years of experience in both music production and
@@ -330,8 +341,8 @@ export default function ResumeMusic() {
           </div>
         ))}
       </section>
-
-      {interests.length > 0 && (
+      {/* <section id="notable_projects" className="space-y-4 pb-8"></section> */}
+      {/* {interests.length > 0 && (
         <section className="space-y-4 pb-8">
           <h2 className="text-2xl font-bold text-gray-900">Interests</h2>
           <ul className="flex flex-wrap gap-2">
@@ -345,8 +356,7 @@ export default function ResumeMusic() {
             ))}
           </ul>
         </section>
-      )}
-      <section id="api"></section>
+      )} */}
     </article>
   );
 }
