@@ -23,11 +23,12 @@ export function SwitchDemo() {
 
 export default function ResumeMusic() {
   const musicSkills = [
-    "Composes original music in various styles",
-    "Produces, mixes and masters tracks using Ableton Live",
-    "Applies advanced music theory in arrangements",
-    "Collaborates with musicians and sound engineers",
-  ];
+"Composes and arranges original music across multiple genres",
+"Produces, mixes, and masters tracks using Ableton Live",
+"Pianist with 20+ years of performance and musical training",
+"Applies advanced music theory, harmony, and arrangement techniques",
+"Experienced educator with strong communication and teaching skills",
+];
   const tab1 = "employee";
   const tab2 = "contractor";
 
@@ -202,14 +203,7 @@ export default function ResumeMusic() {
         </p>
 
         <p>
-          Versatile and hands-on audio professional with a background in jazz
-          composition and years of experience in both music production and
-          technical audio work. Comfortable behind the DAW or the mixing board,
-          I produce, mix, and design sound with precision using Ableton Live,
-          while also handling live setups, system troubleshooting, and clean
-          signal routing with confidence. Whether in the studio or on stage, I
-          bring creativity, technical know-how, and a perfectly coiled XLR cable
-          every time.
+          Composer, producer, and educator with a background in jazz composition and over two decades of musical experience. A pianist since the age of five, I combine strong musicianship with expertise in music production, mixing, and sound design using Ableton Live. Known for my ability to teach and communicate complex concepts clearly, I bring both creativity and technical precision to every project.
         </p>
       </section>
       <section id="skills" className="space-y-4 pb-8">
