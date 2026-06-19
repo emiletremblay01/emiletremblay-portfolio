@@ -91,7 +91,7 @@ export default function ClientPage({
                   </p>
                 </div>
               </NavigationMenuList>
-              {/* <NavigationMenuList>
+               <NavigationMenuList>
                 <div
                   onClick={() => router.push("/resume-music")}
                   className="group px-4 py-2"
@@ -100,7 +100,7 @@ export default function ClientPage({
                     Music Portfolio
                   </p>
                 </div>
-              </NavigationMenuList> */}
+              </NavigationMenuList>
             </div>
           </NavigationMenu>
         </Navbar>
