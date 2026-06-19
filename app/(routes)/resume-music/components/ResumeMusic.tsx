@@ -192,7 +192,7 @@ export default function ResumeMusic() {
           Émile Tremblay
         </h1>
         <p className="text-lg font-semibold text-gray-900">
-          Audio Engineer & Music Producer
+          Composer, Producer & Music Educator
         </p>
         <p>
           Montréal, QC
