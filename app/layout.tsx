@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 const inter = localFont({
-  src: "../public/fonts/Inter.ttf",
+  src: "../public/fonts/Inter.woff2",
   display: "swap",
   variable: "--font-inter",
 });
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html lang="fr" data-scroll-behavior="smooth">
       <body className={inter.variable}>{children}</body>
     </html>
   );

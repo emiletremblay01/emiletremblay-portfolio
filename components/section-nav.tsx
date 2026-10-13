@@ -7,12 +7,19 @@ export default function SectionNav({
 }) {
   const [active, setActive] = useState(sections[0].id);
   useEffect(() => {
+    const visibleSections = new Map<string, number>();
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible[0]) setActive(visible[0].target.id);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting)
+            visibleSections.set(
+              entry.target.id,
+              sections.findIndex((s) => s.id === entry.target.id),
+            );
+          else visibleSections.delete(entry.target.id);
+        });
+        const first = [...visibleSections].sort((a, b) => a[1] - b[1])[0];
+        if (first) setActive(first[0]);
       },
       { rootMargin: "-10% 0px -55% 0px", threshold: 0 },
     );
@@ -31,8 +38,10 @@ export default function SectionNav({
           aria-current={active === s.id ? "location" : undefined}
           onClick={() => setActive(s.id)}
         >
-          <span className="nav-line" />
-          <span className="nav-number">0{i + 1}</span>
+          <span className="nav-line" aria-hidden="true" />
+          <span className="nav-number" aria-hidden="true">
+            0{i + 1}
+          </span>
           {s.label}
         </a>
       ))}

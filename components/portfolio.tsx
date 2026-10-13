@@ -196,7 +196,7 @@ export default function Portfolio({ mode = "general" }: { mode?: Mode }) {
                         height={145}
                         alt={`Aperçu du projet ${project.title}`}
                         className="project-image"
-                        sizes="(max-width: 600px) 100vw, 160px"
+                        sizes="(max-width: 400px) calc(100vw - 40px), (max-width: 760px) 120px, (max-width: 1000px) 110px, 140px"
                       />
                     )}
                     <div>

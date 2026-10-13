@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 :root {
   color-scheme: dark;
   --bg: #0c1729;
@@ -13,14 +10,48 @@
 * {
   box-sizing: border-box;
 }
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+body {
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  font-family: inherit;
+}
+strong {
+  font-weight: bolder;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 48px;
 }
 body {
   margin: 0;
-  background: radial-gradient(ellipse at 15% 18%, #16304866, transparent 42%),
-    var(--bg);
+  background:
+    radial-gradient(ellipse at 15% 18%, #16304866, transparent 42%), var(--bg);
   color: var(--text);
   font-family: var(--font-inter), Arial, sans-serif;
   font-size: 15px;
@@ -66,7 +97,7 @@ h3 {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 44% 56%;
+  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
   padding: 88px 56px 0;
   gap: 34px;
 }
@@ -277,6 +308,7 @@ h3 {
   font-size: 11px !important;
 }
 .responsibilities {
+  list-style: disc;
   padding-left: 15px;
   font-size: 12px;
   line-height: 1.85;
@@ -505,6 +537,8 @@ footer span {
   white-space: nowrap;
 }
 .resume-sheet ul {
+  list-style: disc;
+  margin: 1em 0;
   padding-left: 18px;
 }
 .resume-sheet a {
@@ -534,7 +568,7 @@ footer span {
 @media (max-width: 1000px) {
   .portfolio {
     padding: 55px 35px 0;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
     gap: 18px;
   }
   .sidebar {

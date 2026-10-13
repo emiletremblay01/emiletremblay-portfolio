@@ -1,23 +1,23 @@
 import Link from "next/link";
 import data from "@/data/portfolio.json";
 import PrintButton from "@/components/print-button";
-export const metadata = { title: "Curriculum vitæ" };
-export default function CV({
+export const metadata = {
+  title: "Curriculum vitæ",
+  robots: { index: false, follow: true },
+};
+export default async function CV({
   searchParams,
 }: {
-  searchParams: { volet?: string };
+  searchParams: Promise<{ volet?: string | string[] }>;
 }) {
+  const { volet } = await searchParams;
   const mode =
-    searchParams.volet === "coding"
-      ? "coding"
-      : searchParams.volet === "music"
-        ? "music"
-        : "general";
+    volet === "coding" ? "coding" : volet === "music" ? "music" : "general";
   const specialised = mode === "general" ? null : data[mode];
   const entries = specialised?.experience ?? data.general;
   return (
     <div className="resume-page">
-      <nav className="resume-toolbar">
+      <nav className="resume-toolbar" aria-label="Actions du CV">
         <Link
           href={
             mode === "general"
@@ -127,7 +127,7 @@ export default function CV({
           <section>
             <h2>Distinctions</h2>
             {data.music.awards.map((a) => (
-              <p key={a.name}>
+              <p key={a.name + a.year}>
                 {a.name} — {a.description} · {a.year}
               </p>
             ))}
