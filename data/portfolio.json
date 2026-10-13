@@ -1,0 +1,320 @@
+{
+  "profile": {
+    "name": "Émile Tremblay",
+    "location": "Montréal, Québec",
+    "email": "emile.t.business@gmail.com",
+    "phone": "418 551 8482",
+    "github": "https://github.com/emiletremblay01",
+    "intro": "J’aime comprendre les gens, faire avancer les choses et trouver des solutions concrètes.",
+    "about": [
+      "Mon parcours relie la gestion d’équipe, le service à la clientèle et la création. Au cinéma comme dans mes projets, je prends le temps d’écouter, de comprendre les besoins et de bien faire les choses.",
+      "Mon empathie et mon écoute m’aident à créer des liens de confiance avec les personnes que je côtoie : clients, employés, collègues et supérieurs. Débrouillard et attentif aux détails, je garde mon calme quand une situation demande du jugement.",
+      "La musique et le développement web font aussi partie de mon quotidien. Deux façons de créer, d’apprendre et de transformer une idée en quelque chose de concret."
+    ],
+    "skills": [
+      "Gestion d’équipe",
+      "Coordination",
+      "Gestion des priorités",
+      "Recrutement",
+      "Service à la clientèle",
+      "Vente",
+      "Communication",
+      "Résolution de conflits",
+      "Sang-froid",
+      "Minutie",
+      "Dépannage technique",
+      "Créativité",
+      "Français et anglais"
+    ],
+    "interests": [
+      "Tennis",
+      "Jeux de société",
+      "Cinéma",
+      "Jeux vidéo",
+      "Musique",
+      "Design"
+    ]
+  },
+  "general": [
+    {
+      "dates": "2022 — 2026",
+      "title": "Directeur adjoint",
+      "company": "Cineplex Odeon Quartier Latin",
+      "description": "Une expérience de terrain où gestion, écoute et débrouillardise se rencontrent. Équipier du mois dès mon premier mois, puis rapidement promu au sein de la direction.",
+      "tags": ["Gestion d’équipe", "Opérations", "Recrutement"],
+      "bullets": [
+        "Superviser les opérations quotidiennes et mobiliser les équipes en période de fort achalandage.",
+        "Conduire des entrevues, accompagner les employés et résoudre les conflits.",
+        "Coordonner des événements d’envergure et des premières de films.",
+        "Désamorcer les situations difficiles avec la clientèle avec calme et jugement.",
+        "Diagnostiquer les bris, effectuer des réparations et coordonner les fournisseurs spécialisés.",
+        "Créer des outils numériques internes, dont une application de demandes de remplacement."
+      ]
+    },
+    {
+      "dates": "2019 — 2021",
+      "title": "Collaborateur",
+      "company": "IKEA Cavendish",
+      "description": "Accompagner les clients en magasin, comprendre leurs besoins et les conseiller.",
+      "tags": ["Service à la clientèle", "Vente"],
+      "bullets": []
+    },
+    {
+      "dates": "2017 — 2019",
+      "title": "Chef ingénieur du son",
+      "company": "Cégep Saint-Laurent",
+      "description": "Préparer l’équipement technique, sonoriser les événements et soutenir les artistes.",
+      "tags": ["Sonorisation", "Coordination"],
+      "bullets": []
+    },
+    {
+      "dates": "2016 — 2018",
+      "title": "Guide touristique et ingénieur du son",
+      "company": "École de l’Anse",
+      "description": "Accueillir les visiteurs, animer le site et assurer la sonorisation.",
+      "tags": ["Accueil", "Animation"],
+      "bullets": []
+    },
+    {
+      "dates": "2015 — 2016",
+      "title": "Plongeur",
+      "company": "Auberge sur Mer",
+      "description": "Notre-Dame-du-Portage",
+      "tags": [],
+      "bullets": []
+    },
+    {
+      "dates": "2014 — 2015",
+      "title": "Sauveteur",
+      "company": "Piscine du Portage",
+      "description": "Notre-Dame-du-Portage",
+      "tags": [],
+      "bullets": []
+    },
+    {
+      "dates": "2013 — 2014",
+      "title": "Garçon de table",
+      "company": "Auberge du Portage",
+      "description": "Notre-Dame-du-Portage",
+      "tags": [],
+      "bullets": []
+    }
+  ],
+  "education": [
+    {
+      "dates": "2021 — 2022",
+      "title": "AEC en développement web",
+      "company": "Collège de Rosemont"
+    },
+    {
+      "dates": "2016 — 2019",
+      "title": "Technique professionnelle de musique, composition",
+      "company": "Cégep Saint-Laurent"
+    },
+    {
+      "dates": "2010 — 2015",
+      "title": "Baccalauréat international",
+      "company": "École secondaire de Rivière-du-Loup"
+    }
+  ],
+  "coding": {
+    "title": "Développement web",
+    "subtitle": "Des idées aux outils concrets.",
+    "about": [
+      "Je crée et maintiens des sites et des applications web depuis 2022. J’aime traduire un besoin concret en une interface claire, utile et agréable à utiliser.",
+      "Mon expérience en gestion me donne un point de vue pratique : les outils que je développe doivent simplifier le travail des personnes qui les utilisent."
+    ],
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS"
+    ],
+    "experience": [
+      {
+        "dates": "Depuis 2022",
+        "title": "Développeur web contractuel",
+        "company": "Montréal",
+        "description": "Création et maintenance de sites et d’applications web selon les besoins des clients, notamment pour Périphérie Le Mag.",
+        "tags": ["Interfaces", "Maintenance", "Collaboration"],
+        "bullets": []
+      }
+    ],
+    "projects": [
+      {
+        "title": "Demandes d’affiches",
+        "description": "Une application créée pour l’équipe de gestion du cinéma afin de centraliser les demandes d’affiches et simplifier leur suivi.",
+        "image": "/images/poster.jpg",
+        "href": "https://demandes-posters-app.vercel.app/",
+        "tags": ["Application interne", "Gestion"]
+      },
+      {
+        "title": "Périphérie Le Mag",
+        "description": "Création du site d’un magazine d’art local, avec boutique et tableau de bord pour administrer le contenu.",
+        "image": "/images/site-peripherie.jpg",
+        "href": "https://peripherie-website.vercel.app/",
+        "tags": ["Site web", "Boutique"]
+      },
+      {
+        "title": "Demandes de remplacement",
+        "description": "Un outil interne pour faciliter les demandes de remplacement et la coordination des employés du cinéma.",
+        "image": "/images/app-remplacements.jpg",
+        "href": "https://remplacement-app-portfoliodb.vercel.app/",
+        "tags": ["Application interne", "Coordination"]
+      },
+      {
+        "title": "Portfolio Vito",
+        "description": "Un portfolio personnalisé et son tableau de bord de gestion.",
+        "href": "https://portfolio-vito.vercel.app/",
+        "secondaryHref": "https://dashboard-vito-final.vercel.app/",
+        "tags": ["Portfolio", "Tableau de bord"]
+      }
+    ]
+  },
+  "music": {
+    "title": "Musique & son",
+    "subtitle": "Composer. Produire. Transmettre.",
+    "about": [
+      "Pianiste depuis l’âge de cinq ans, je compose, arrange, produis et mixe de la musique. Ma formation en composition jazz nourrit une approche à la fois créative et attentive aux détails.",
+      "Depuis 2015, mes projets vont de la musique à l’image aux arrangements pour ensembles, en passant par la scène, le mixage et l’enseignement du piano et de la théorie musicale."
+    ],
+    "skills": [
+      "Piano",
+      "Composition",
+      "Arrangement",
+      "Ableton Live",
+      "Production",
+      "Mixage",
+      "Mastering",
+      "Sonorisation",
+      "Enseignement"
+    ],
+    "experience": [
+      {
+        "title": "Chef technicien de scène",
+        "company": "Salle Adrienne-Milotte",
+        "location": "Montreal, QC",
+        "description": "Installation de l’équipement, sonorisation en direct et soutien aux artistes.",
+        "dates": "2017 - 2019"
+      },
+      {
+        "title": "Chef technicien de scène",
+        "company": "École de l'Anse",
+        "location": "Notre-Dame-du-Portage, QC",
+        "description": "Installation de l’équipement, sonorisation en direct et soutien aux artistes.",
+        "dates": "2016 - 2018"
+      },
+      {
+        "title": "DJ",
+        "company": "Le Loft",
+        "location": "Rivière-du-Loup, QC",
+        "description": "Sélection et mixage musical pour créer l’ambiance du restaurant.",
+        "dates": "2016 - 2018"
+      },
+      {
+        "title": "Pianiste accompagnateur — ensemble de jazz vocal",
+        "company": "ÉMAC",
+        "location": "Rivière-du-Loup, QC",
+        "description": "Accompagnement au piano de la chorale pendant les répétitions.",
+        "dates": "2013 - 2015"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Trio Temps Libre",
+        "company": "",
+        "description": "Arrangements et pistes d’accompagnement pour différents projets de trio jazz.",
+        "dates": "2018 - 2023"
+      },
+      {
+        "title": "The Four — Rose Adam",
+        "company": "",
+        "description": "Mixage audio d’un single de Rose Adam.",
+        "dates": "2022"
+      },
+      {
+        "title": "On Est Loisir",
+        "company": "",
+        "description": "Production complète et arrangement d’une chanson pour le Cégep de Rivière-du-Loup.",
+        "dates": "2021",
+        "hyperlink": "https://www.youtube.com/watch?v=vNMUY8s-gsw"
+      },
+      {
+        "title": "Concerts en résidences",
+        "company": "",
+        "description": "Prestations au piano en trio jazz dans des résidences pour personnes âgées.",
+        "dates": "2018 - 2020"
+      },
+      {
+        "title": "Livres d’Artistes",
+        "company": "",
+        "description": "Composition pour la vidéo promotionnelle d’une exposition d’art.",
+        "dates": "2019",
+        "hyperlink": "https://youtu.be/wAJ95dwyzjc?t=44"
+      },
+      {
+        "title": "Sunflower — Mojarke",
+        "company": "",
+        "description": "Mixage audio d’un single de Mojarke.",
+        "dates": "2019"
+      },
+      {
+        "title": "Concert de fin d’études",
+        "company": "",
+        "description": "Mixage audio et montage vidéo du concert de fin d’études du programme de musique du Cégep Saint-Laurent.",
+        "dates": "2019"
+      },
+      {
+        "title": "St-Laurent — Chassepareil",
+        "company": "",
+        "description": "Arrangement de flûte pour une chanson de Chassepareil.",
+        "dates": "2018"
+      },
+      {
+        "title": "In Loving Memory",
+        "company": "",
+        "description": "Composition de la musique originale d’un court métrage.",
+        "dates": "2018",
+        "hyperlink": "https://www.youtube.com/watch?v=_eXK9gLwRJE"
+      },
+      {
+        "title": "DJ et producteur indépendant",
+        "company": "",
+        "description": "Animation musicale de fêtes, événements d’entreprise, bals et spectacles.",
+        "dates": "2014 - 2018"
+      }
+    ],
+    "awards": [
+      {
+        "name": "Prix Studio Jupiter",
+        "description": "Cégeps en spectacle",
+        "year": 2018,
+        "hyperlink": "https://www.cegepsl.qc.ca/nouvelles/cegeps-en-spectacle-emile-tremblay-remporte-le-prix-studio-jupiter/"
+      },
+      {
+        "name": "Lauréat de la finale locale",
+        "description": "Cégeps en spectacle",
+        "year": 2017
+      },
+      {
+        "name": "Lauréat de la finale locale et prix du public",
+        "description": "Cégeps en spectacle",
+        "year": 2015,
+        "hyperlink": "https://www.infodimanche.com/actualites/culturel/281464/emile-tremblay-remporte-la-finale-locale-de-cegeps-en-spectacle"
+      },
+      {
+        "name": "Lauréat de la finale locale",
+        "description": "Secondaire en spectacle",
+        "year": 2014
+      },
+      {
+        "name": "Médailles d’or — piano classique",
+        "description": "Concours de piano classique",
+        "year": "2005-2016"
+      }
+    ]
+  }
+}

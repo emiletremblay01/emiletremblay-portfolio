@@ -1,43 +1,35 @@
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-const robotoMono = Roboto_Mono({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-robotomono",
+const inter = localFont({
+  src: "../public/fonts/Inter.ttf",
+  display: "swap",
+  variable: "--font-inter",
 });
-
 export const metadata: Metadata = {
-  title: "Emile Tremblay Portfolio",
-  description: "My personal portfolio",
+  metadataBase: new URL("https://emile-tremblay.com"),
+  title: {
+    default: "Émile Tremblay — Gestion, service & création",
+    template: "%s | Émile Tremblay",
+  },
+  description:
+    "Découvrez le parcours d’Émile Tremblay : gestion d’équipe, service à la clientèle, développement web et musique à Montréal.",
+  openGraph: {
+    title: "Émile Tremblay",
+    description:
+      "Gestion, service & création. Un parcours humain et polyvalent à Montréal.",
+    locale: "fr_CA",
+    type: "website",
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // try {
-  //   await queryClient.prefetchQuery({
-  //     queryKey: ["technologies"],
-  //     queryFn: getTechnologies,
-  //   });
-  // } catch (error) {
-  //   console.error(error);
-  // }
-
   return (
-    <html lang="en">
-      <body
-        className={`${robotoMono.variable} bg-gray-950 font-mono text-gray-300`}
-      >
-        {/* <Provider>
-          <HydrationBoundary state={dehydrate(queryClient)}> */}
-        {/* <Home {...props} /> */}
-        {children}
-        {/* </HydrationBoundary>
-        </Provider> */}
-      </body>
+    <html lang="fr">
+      <body className={inter.variable}>{children}</body>
     </html>
   );
 }
